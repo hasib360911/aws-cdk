@@ -16,7 +16,7 @@ describe('AppSync API Key Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
     });
 
     // THEN
@@ -27,7 +27,7 @@ describe('AppSync API Key Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: { authorizationType: appsync.AuthorizationType.IAM },
         additionalAuthorizationModes: [
@@ -44,7 +44,7 @@ describe('AppSync API Key Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: { authorizationType: appsync.AuthorizationType.IAM },
       },
@@ -58,7 +58,7 @@ describe('AppSync API Key Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: { authorizationType: appsync.AuthorizationType.IAM },
         additionalAuthorizationModes: [],
@@ -73,7 +73,7 @@ describe('AppSync API Key Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: { authorizationType: appsync.AuthorizationType.IAM },
         additionalAuthorizationModes: [{
@@ -95,7 +95,7 @@ describe('AppSync API Key Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'API', {
       name: 'apiKeyUnitTest',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.auth.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.auth.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.API_KEY,
@@ -117,7 +117,7 @@ describe('AppSync API Key Authorization', () => {
     const when = () => {
       new appsync.GraphqlApi(stack, 'API', {
         name: 'apiKeyUnitTest',
-        schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.auth.graphql')),
+        schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.auth.graphql')),
         authorizationConfig: {
           defaultAuthorization: {
             authorizationType: appsync.AuthorizationType.API_KEY,
@@ -138,7 +138,7 @@ describe('AppSync API Key Authorization', () => {
     const when = () => {
       new appsync.GraphqlApi(stack, 'API', {
         name: 'apiKeyUnitTest',
-        schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.auth.graphql')),
+        schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.auth.graphql')),
         authorizationConfig: {
           defaultAuthorization: {
             authorizationType: appsync.AuthorizationType.API_KEY,
@@ -158,7 +158,7 @@ describe('AppSync API Key Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: { authorizationType: appsync.AuthorizationType.IAM },
         additionalAuthorizationModes: [
@@ -185,7 +185,7 @@ describe('AppSync API Key Authorization', () => {
     expect(() => {
       new appsync.GraphqlApi(stack, 'api', {
         name: 'api',
-        schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+        schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
         authorizationConfig: {
           additionalAuthorizationModes: [{
             authorizationType: appsync.AuthorizationType.API_KEY,
@@ -200,7 +200,7 @@ describe('AppSync API Key Authorization', () => {
     expect(() => {
       new appsync.GraphqlApi(stack, 'api', {
         name: 'api',
-        schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+        schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
         authorizationConfig: {
           defaultAuthorization: { authorizationType: appsync.AuthorizationType.API_KEY },
           additionalAuthorizationModes: [{
@@ -216,7 +216,7 @@ describe('AppSync API Key Authorization', () => {
     expect(() => {
       new appsync.GraphqlApi(stack, 'api', {
         name: 'api',
-        schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+        schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
         authorizationConfig: {
           defaultAuthorization: { authorizationType: appsync.AuthorizationType.IAM },
           additionalAuthorizationModes: [
@@ -234,7 +234,7 @@ describe('AppSync IAM Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: { authorizationType: appsync.AuthorizationType.IAM },
       },
@@ -250,7 +250,7 @@ describe('AppSync IAM Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         additionalAuthorizationModes: [{ authorizationType: appsync.AuthorizationType.IAM }],
       },
@@ -267,7 +267,7 @@ describe('AppSync IAM Authorization', () => {
     expect(() => {
       new appsync.GraphqlApi(stack, 'api', {
         name: 'api',
-        schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+        schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
         authorizationConfig: {
           defaultAuthorization: { authorizationType: appsync.AuthorizationType.IAM },
           additionalAuthorizationModes: [{ authorizationType: appsync.AuthorizationType.IAM }],
@@ -281,7 +281,7 @@ describe('AppSync IAM Authorization', () => {
     expect(() => {
       new appsync.GraphqlApi(stack, 'api', {
         name: 'api',
-        schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+        schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
         authorizationConfig: {
           additionalAuthorizationModes: [
             { authorizationType: appsync.AuthorizationType.IAM },
@@ -302,7 +302,7 @@ describe('AppSync User Pool Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.USER_POOL,
@@ -326,7 +326,7 @@ describe('AppSync User Pool Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.USER_POOL,
@@ -355,7 +355,7 @@ describe('AppSync User Pool Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         additionalAuthorizationModes: [{
           authorizationType: appsync.AuthorizationType.USER_POOL,
@@ -380,7 +380,7 @@ describe('AppSync User Pool Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         additionalAuthorizationModes: [{
           authorizationType: appsync.AuthorizationType.USER_POOL,
@@ -410,7 +410,7 @@ describe('AppSync User Pool Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.USER_POOL,
@@ -467,7 +467,7 @@ describe('AppSync OIDC Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.OIDC,
@@ -489,7 +489,7 @@ describe('AppSync OIDC Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.OIDC,
@@ -519,7 +519,7 @@ describe('AppSync OIDC Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         additionalAuthorizationModes: [{
           authorizationType: appsync.AuthorizationType.OIDC,
@@ -543,7 +543,7 @@ describe('AppSync OIDC Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         additionalAuthorizationModes: [{
           authorizationType: appsync.AuthorizationType.OIDC,
@@ -575,7 +575,7 @@ describe('AppSync OIDC Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.OIDC,
@@ -646,7 +646,7 @@ describe('AppSync Lambda Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.LAMBDA,
@@ -687,7 +687,7 @@ describe('AppSync Lambda Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.LAMBDA,
@@ -729,7 +729,7 @@ describe('AppSync Lambda Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         additionalAuthorizationModes: [{
           authorizationType: appsync.AuthorizationType.LAMBDA,
@@ -769,7 +769,7 @@ describe('AppSync Lambda Authorization', () => {
     // WHEN
     new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         additionalAuthorizationModes: [{
           authorizationType: appsync.AuthorizationType.LAMBDA,
@@ -812,7 +812,7 @@ describe('AppSync Lambda Authorization', () => {
   test('Lambda authorization throws with multiple lambda authorization', () => {
     expect(() => new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.LAMBDA,
@@ -835,7 +835,7 @@ describe('AppSync Lambda Authorization', () => {
 
     expect(() => new appsync.GraphqlApi(stack, 'api2', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: { authorizationType: appsync.AuthorizationType.IAM },
         additionalAuthorizationModes: [
@@ -863,7 +863,7 @@ describe('AppSync Lambda Authorization', () => {
   test('throws if authorization type and mode do not match', () => {
     expect(() => new appsync.GraphqlApi(stack, 'api', {
       name: 'api',
-      schema: appsync.Schema.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
+      schema: appsync.SchemaFile.fromAsset(path.join(__dirname, 'appsync.test.graphql')),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.LAMBDA,
