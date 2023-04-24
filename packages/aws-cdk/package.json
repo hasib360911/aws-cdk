@@ -98,7 +98,7 @@
     "@aws-cdk/region-info": "0.0.0",
     "@jsii/check-node": "1.71.0",
     "archiver": "^5.3.1",
-    "aws-sdk": "^2.1211.0",
+    "aws-sdk": "^2.1354.0",
     "camelcase": "^6.3.0",
     "cdk-assets": "0.0.0",
     "chokidar": "^3.5.3",
@@ -117,7 +117,7 @@
     "table": "^6.8.1",
     "uuid": "^8.3.2",
     "wrap-ansi": "^7.0.0",
-    "yaml": "1.10.2",
+    "yaml": "2.2.2",
     "yargs": "^16.2.0"
   },
   "repository": {
