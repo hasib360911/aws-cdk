@@ -278,7 +278,7 @@
     "@aws-cdk/core": "0.0.0",
     "@aws-cdk/cx-api": "0.0.0",
     "constructs": "^10.0.0",
-    "yaml": "1.10.2"
+    "yaml": "2.2.2"
   },
   "peerDependencies": {
     "@aws-cdk/alexa-ask": "0.0.0",
