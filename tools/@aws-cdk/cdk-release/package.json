@@ -39,10 +39,10 @@
   "dependencies": {
     "@lerna/project": "^4.0.0",
     "changelog-parser": "^2.8.1",
-    "conventional-changelog": "^3.1.25",
+    "conventional-changelog": "^4.0.0",
     "conventional-changelog-config-spec": "^2.1.0",
     "conventional-changelog-preset-loader": "^2.3.4",
-    "conventional-changelog-writer": "^4.1.0",
+    "conventional-changelog-writer": "^6.0.1",
     "conventional-commits-parser": "^3.2.4",
     "detect-indent": "^6.1.0",
     "detect-newline": "^3.1.0",
