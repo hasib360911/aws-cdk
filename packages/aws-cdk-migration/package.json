@@ -34,7 +34,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "glob": "^7.2.3",
+    "glob": "^9.0.0",
     "typescript": "~3.9.10"
   },
   "devDependencies": {
