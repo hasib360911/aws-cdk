@@ -22,7 +22,7 @@
     "camelcase": "^6.3.0",
     "chalk": "^4",
     "fs-extra": "^9.1.0",
-    "jsii-reflect": "1.71.0",
+    "jsii-reflect": "1.86.0",
     "yargs": "^16.2.0"
   },
   "devDependencies": {
