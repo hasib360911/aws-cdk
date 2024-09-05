@@ -24,8 +24,8 @@
     "typescript": "~3.9.10"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^4.33.0",
-    "eslint": "^7.32.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "eslint": "^8.44.0",
     "fs-extra": "^9.1.0"
   },
   "jest": {
