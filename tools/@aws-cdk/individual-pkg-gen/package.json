@@ -34,7 +34,7 @@
   "dependencies": {
     "aws-cdk-migration": "0.0.0",
     "fs-extra": "^9.1.0",
-    "@lerna/project": "4.0.0"
+    "@lerna/project": "6.4.1"
   },
   "keywords": [
     "aws",
